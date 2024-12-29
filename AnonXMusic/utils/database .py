@@ -62,6 +62,12 @@ async def get_cmode(chat_id: int) -> int:
         return mode["mode"]
     return mode
 
+async def set_cmode(chat_id: int, mode: int):
+    channelconnect[chat_id] = mode
+    await channeldb.update_one(
+        {"chat_id": chat_id}, {"$set": {"mode": mode}}, upsert=True
+    )
+
 async def get_queries() -> int:
     chat_id = 98324
     mode = await queriesdb.find_one({"chat_id": chat_id})
