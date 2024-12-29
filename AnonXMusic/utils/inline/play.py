@@ -95,6 +95,7 @@ def stream_markup(_, chat_id):
         InlineKeyboardButton(text="𝐔𝞀𝗱𝛂𝖙𝝴", url=f"https://t.me/beast_fox_network"),
         InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data=" close "),
         ]
+    ]   
     return buttons
 
 
