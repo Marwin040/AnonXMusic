@@ -52,6 +52,7 @@ video = {}
 
 # Total Queries on bot
 
+# Channel Play IDS
 async def get_cmode(chat_id: int) -> int:
     mode = channelconnect.get(chat_id)
     if not mode:
@@ -61,6 +62,7 @@ async def get_cmode(chat_id: int) -> int:
         channelconnect[chat_id] = mode["mode"]
         return mode["mode"]
     return mode
+
 
 async def set_cmode(chat_id: int, mode: int):
     channelconnect[chat_id] = mode
