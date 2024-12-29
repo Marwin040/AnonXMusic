@@ -11,8 +11,8 @@ httpx==0.27.2
 motor==2.5.0
 pillow==9.5.0
 psutil
-py-tgcalls==1.2.9
-ntgcalls==3.0.0
+py-tgcalls==0.9.7
+ntgcalls==1.2.0
 pykeyboard
 pyrofork
 python-dotenv
